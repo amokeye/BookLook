@@ -1,10 +1,24 @@
+// Dependencies
 const express = require('express');
 const path = require('path');
+
+// Imports
 const db = require('./config/connection');
 const routes = require('./routes');
+const { authMiddleware } = require('./utils/auth');
 
+// App and PORT set-up
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Integrate middleware into server
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context: authMiddleware
+});
+
+server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
