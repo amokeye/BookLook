@@ -6,7 +6,7 @@
 ![image](https://user-images.githubusercontent.com/67798512/106402304-b88b6f00-63dd-11eb-8458-5b07918c75f3.png)<br>
 <br>
 
-## Webite
+## Website
 [Click here](https://booklook123.herokuapp.com) to navigate to the deployed Heroku application, now!
 
 ## Contact
